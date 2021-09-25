@@ -4,10 +4,10 @@ jupytext:
   text_representation:
     extension: .md
     format_name: myst
-    format_version: 0.12
-    jupytext_version: 1.6.0
+    format_version: 0.13
+    jupytext_version: 1.11.4
 kernelspec:
-  display_name: Python 3
+  display_name: Python 3 (ipykernel)
   language: python
   name: python3
 ---
@@ -184,7 +184,7 @@ Now, you create a `for`-loop to solve for `v_numerical` at times 2, 4, 6, 8, 10,
 v_numerical=np.zeros(len(t));
 for i in range(1,len(t)):
     v_numerical[i]=v_numerical[i-1]+((g-c/m*v_numerical[i-1]**2))*2;
-
+    
 v_numerical
 ```
 
@@ -639,7 +639,6 @@ print('years=',year)
 print('population =', pop)
 ```
 
-
 ```{code-cell} ipython3
 print('average population changes 1900-1950, 1950-2000, 2000-2020')
 print((pop[1:] - pop[0:-1])/(year[1:] - year[0:-1]))
@@ -648,7 +647,6 @@ print(np.mean((pop[1:] - pop[0:-1])/(year[1:] - year[0:-1])))
 ```
 
 __d.__ As the number of time steps increases, the Euler approximation approaches the analytical solution, not the measured data. The best-case scenario is that the Euler solution is the same as the analytical solution.
-
 
 +++
 
